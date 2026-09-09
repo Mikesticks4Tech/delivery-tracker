@@ -22,7 +22,7 @@ A real-time last-mile delivery tracking platform built for the Nigerian market â
 
 ## Live Demo
 
-[Live URL here once deployed]
+[https://delivery-tracker-black.vercel.app](https://delivery-tracker-black.vercel.app)
 
 ## Tech Stack
 
