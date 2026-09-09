@@ -11,8 +11,10 @@ const orderRoutes = require("./routes/orderRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
+const ALLOWED_ORIGIN = "https://delivery-tracker-black.vercel.app";
+
 const app = express();
-app.use(cors());
+app.use(cors({ origin: ALLOWED_ORIGIN }));
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/orders", orderRoutes);
@@ -22,7 +24,7 @@ app.use("/api/admin", adminRoutes);
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  cors: { origin: "*" },
+  cors: { origin: ALLOWED_ORIGIN },
 });
 
 mongoose
